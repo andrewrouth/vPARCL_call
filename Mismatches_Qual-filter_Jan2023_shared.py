@@ -30,7 +30,7 @@ with gzip.open(str(args.Pileup), 'rt') as In:
                 All_Data[Ref].append(["Ref", "Coverage", "A", "T", "G", "C"])
             All_Data[Ref].append([0,0,0,0,0,0])
             Position = int(Data[1])
-            RefNuc = Data[2]
+            RefNuc = Data[2].upper()
             Seqs = Data[4].upper()
             Quals = Data[5]
             while len(All_Data[Ref]) <= Position:
